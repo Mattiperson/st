@@ -35,7 +35,7 @@ Just do they stuff and you should be good.
 ### Dependencies
 * TerminessTTF Nerd Font
 ```sh
-yay -S nerd-fonts
+yay -S nerd-fonts-terminess
 ```
 
 ### Nice things
