@@ -4,9 +4,9 @@
 * [About the Project](#about-the-project)
   * [Built With](#built-with)
 * [Getting Started](#getting-started)
+  * [Dependencies](#dependencies)
   * [Nice things](#nice-things)
   * [Installation](#installation)
-* [Usage](#usage)
 * [Contributing](#contributing)
 * [License](#license)
 
@@ -31,6 +31,12 @@ A not so intensly patched ST config made by me.
 ## Getting Started
 
 Just do they stuff and you should be good.
+
+### Dependencies
+* TerminessTTF Nerd Font
+```sh
+yay -S nerd-fonts
+```
 
 ### Nice things
 
@@ -61,11 +67,12 @@ sudo make clean install
 
 1. Clone the repo
 ```sh
+cd .config
 git clone https://github.com/Mattiperson/st
 ```
 2. Cd in and make install
 ```sh
-cd .dwm
+cd st
 ```
 ```sh
 sudo make clean install
