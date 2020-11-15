@@ -5,8 +5,9 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "TerminessTTF Nerd Font Mono:pixelsize=25:antialias=true:autohint=true";
-static int borderpx = 2;
+static char *font = "Iosevka Term:pixelsize=18:antialias=true:autohint=true";
+static char *font2 = "Siji:pixelsize=16:antialias=true:autohint=true";
+static int borderpx = 10;
 
 /*
  * What program is execed by st depends of these precedence rules:
@@ -94,36 +95,37 @@ char *termname = "st-256color";
 unsigned int tabspaces = 8;
 
 /* bg opacity */
-float alpha = 0.9;
+//float alpha = 0.9;
+float alpha = 1;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
 	/* 8 normal colors */
-	"#3b4252", /* black   */
-        "#bf616a", /* red     */
-        "#a3be8c", /* green   */
-        "#ebcb8b", /* yellow  */
-        "#81a1c1", /* blue    */
-        "#b48ead", /* magenta */
-        "#88c0d0", /* cyan    */
-        "#e5e9f0", /* white   */
+	"#1d1f21", /* black   */
+        "#A74034", /* red     */
+        "#75A734", /* green   */
+        "#A78C34", /* yellow  */
+        "#4374A3", /* blue    */
+        "#A73475", /* magenta */
+        "#5393B6", /* cyan    */
+        "#e4d8ca", /* white   */
 
 
 	/* 8 bright colors */
-	"#4c566a", /* black   */
-        "#bf616a", /* red     */
-        "#a3be8c", /* green   */
-        "#ebcb8b", /* yellow  */
-        "#81a1c1", /* blue    */
-        "#b48ead", /* magenta */
-        "#8fbcbb", /* cyan    */
-        "#eceff4", /* white   */
+	"#090a0c", /* black   */
+        "#C45B4B", /* red     */
+        "#8BC44B", /* green   */
+        "#C4AC4B", /* yellow  */
+        "#5F87B4", /* blue    */
+        "#C44B8B", /* magenta */
+        "#89B9C8", /* cyan    */
+        "#ab9c7d", /* white   */
 
 	[255] = 0,
 
 	/* more colors can be added after 255 to use with DefaultXX */
-	"#2e3440", /* background */
-        "#d8dee9", /* foreground */
+	"#050505", /* background */
+        "#c3b8a6", /* foreground */
 };
 
 
@@ -364,8 +366,12 @@ static Key key[] = {
 	{ XK_End,           ControlMask,    "\033[1;5F",    +1,    0},
 	{ XK_End,           ShiftMask,      "\033[K",       -1,    0},
 	{ XK_End,           ShiftMask,      "\033[1;2F",    +1,    0},
-	{ XK_End,           XK_ANY_MOD,     "\033[4~",       0,    0},
-	{ XK_Prior,         ControlMask,    "\033[5;5~",     0,    0},
+	{ XK_End,           XK_ANY_MOD,     "\033[4~",       0,    0}, {
+									       XK_Prior,
+									       ControlMask,
+									       "\033[5;5~",
+									       0,
+									       0},
 	{ XK_Prior,         ShiftMask,      "\033[5;2~",     0,    0},
 	{ XK_Prior,         XK_ANY_MOD,     "\033[5~",       0,    0},
 	{ XK_Next,          ControlMask,    "\033[6;5~",     0,    0},
